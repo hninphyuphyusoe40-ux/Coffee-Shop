@@ -1,0 +1,500 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+@keyframes leafWobble {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(35deg); } 
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fcf8f2; 
+    color: #3e2723; 
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: rgba(252, 248, 242, 0.9); /* လှေလှေလေးဖြစ်အောင် အကြည်ရောင်စပ်ထားပါတယ် */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-icon {
+    font-size: 28px;
+    display:inline-block;
+    animation: leafWobble 3s ease-in-out infinite;
+}
+
+.logo-text {
+   font-family: 'Cormorant Garamond', serif !important;
+    font-size: 26px;
+    font-weight: bold;
+    color: #8d4f2a; /* Autumn Orange/Brown */
+    letter-spacing: 1px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #5d4037;
+    margin-left: 30px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #8d4f2a;
+}
+
+/* Hero Section Styling */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    /* အနောက်က background ပုံကို စာအုပ်နဲ့ကော်ဖီပုံ ထည့်ထားပါတယ် */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('3.jpg') no-repeat center center/cover;
+    margin-top: 0;
+}
+
+.hero-content {
+    max-width: 650px;
+    color: #ffffff; /* ပုံအနောက်မှာ စာသားကြည်လင်အောင် အဖြူရောင်သုံးထားပါတယ် */
+}
+
+.hero-title {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-weight: 600;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.hero-title span {
+    color: #e6a15c; /* Autumn Gold Color */
+}
+
+.hero-subtitle {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+    color: #f5f5f5;
+    font-weight: 300;
+}
+
+/* Buttons */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    font-size: 15px;
+}
+
+.btn-primary {
+    background-color: #8d4f2a;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #a05d35;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: white;
+    color: #3e2723;
+    transform: translateY(-2px);
+}
+
+
+/* About Section Styling */
+.about-section {
+    padding: 100px 8%;
+    background-color: #fcf8f2; /* Cream Color Background */
+    scroll-margin-top: 80px; /* Navbar က စာသားကို သွားမကွယ်အောင် နေရာချန်တာပါ */
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+   
+    border-radius: 50px 15px 50px 15px;
+    box-shadow: 0 10px 30px rgba(62, 39, 35, 0.1); /* အရိပ်လေးထည့်ပေးထားပါတယ် */
+    object-fit: cover;
+    height: 450px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text .sub-title {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #e6a15c; /* Autumn Gold */
+    font-weight: 600;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.about-text h2 {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-weight: 600;
+    font-size: 36px;
+    color: #3e2723; /* Dark Brown */
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.about-text h2 span {
+    color: #8d4f2a; /* Autumn Orange/Brown */
+}
+
+.about-text p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #5d4037; /* Medium Brown */
+    margin-bottom: 15px;
+}
+
+/* About Features (Icons) */
+.about-features {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 15px;
+}
+
+.feature-item {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    border: 1px solid #f1e6da;
+}
+
+.feature-icon {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.feature-item p {
+    font-size: 12px;
+    font-weight: 600;
+    color: #3e2723;
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+
+/* Menu Section Styling */
+.menu-section {
+    padding: 100px 8%;
+    background-color: #fffbf7; /* Cream color ထက် နည်းနည်းပိုလင်းတဲ့အရောင် */
+    scroll-margin-top: 80px;
+}
+
+.menu-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.menu-heading .sub-title {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #e6a15c;
+    font-weight: 600;
+}
+
+.menu-heading h2 {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-weight: 600;
+    font-size: 36px;
+    color: #3e2723;
+    margin: 10px 0;
+}
+
+.menu-heading p {
+    color: #795548;
+    font-size: 15px;
+}
+
+/* Menu Layout Gird */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Menu Card Styling */
+.menu-card {
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden; /* ပုံထောင့်တွေကို ကတ်ထောင့်အတိုင်း ဝိုင်းသွားအောင်လို့ပါ */
+    box-shadow: 0 5px 20px rgba(62, 39, 35, 0.05);
+    border: 1px solid #f1e6da;
+    transition: transform 0.3s ease;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.menu-card:hover {
+transform: translateY(-10px) scale(1.02);
+box-shadow: 0 20px 40px rgba(62, 39, 35, 0.15);
+box-shadow: 0 15px 30px rgba(141, 79, 42, 0.2); 
+    border-color: #e6a15c;
+}
+
+.menu-img img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.menu-info {
+    padding: 25px;
+}
+
+.menu-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: #3e2723;
+    margin-bottom: 10px;
+}
+
+.menu-info p {
+    font-size: 14px;
+    color: #5d4037;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    height: 45px; /* စာသားလိုင်းတွေ အညီအမျှဖြစ်အောင် အမြင့်သတ်မှတ်တာပါ */
+}
+
+.menu-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #8d4f2a;
+    display: block;
+}
+
+
+/* Contact & Footer Styling */
+.contact-section {
+    padding: 100px 8% 0 8%; /* အောက်ခြေကို footer နဲ့ ကပ်သွားအောင် bottom padding ကို ၀ ပေးထားပါတယ် */
+    background-color: #3e2723; /* Dark Brown Background */
+    color: #ffffff; /* စာသားတွေကို အဖြူရောင်ပြောင်းတာပါ */
+    scroll-margin-top: 80px;
+}
+
+.contact-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h2 {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-weight: 600;
+    font-size: 36px;
+    color: #e6a15c; /* Autumn Gold */
+    margin-bottom: 15px;
+}
+
+.contact-sub {
+    font-size: 15px;
+    color: #d7ccc8;
+    margin-bottom: 35px;
+    line-height: 1.6;
+}
+
+.info-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.info-icon {
+    font-size: 24px;
+    background: rgba(230, 161, 92, 0.1);
+    padding: 10px;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-item p {
+    font-size: 15px;
+    color: #f5f5f5;
+    margin-bottom: 0;
+}
+
+.info-item strong {
+    color: #e6a15c;
+}
+
+/* Map Area */
+.contact-map {
+    flex: 1;
+}
+
+.contact-map img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 2px solid #5d4037;
+}
+
+/* Footer Bottom Copyright */
+.footer-bottom {
+    text-align: center;
+    padding: 25px 0;
+    border-top: 1px solid #5d4037;
+    margin-top: 40px;
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    color: #b0bec5;
+    margin-bottom: 0;
+}
+
+.feature-item {
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: scale(1.05);
+    border-color: #8d4f2a; /* ဆိုင်ရဲ့ Theme အရောင်လေး လိုက်ပြောင်းတာပါ */
+    background-color: #fffbf7;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); } /* နည်းနည်းလေး ကြီးလာမယ် */
+    100% { transform: scale(1); }
+}
+
+.btn-primary {
+    animation: pulse 2s infinite ease-in-out; /* ၂ စက္ကန့်တစ်ခါ အလိုအလျောက် လှုပ်နေမှာပါ */
+}
+
+.logo-img-icon {
+    width: 45px;          
+    height: 45px;         
+    object-fit: cover;    
+    border-radius: 50%;  
+    vertical-align: middle; 
+    margin-right: 8px;    
+    
+    /* အလှုပ်အရွ Animation ဆက်ရှိနေစေဖို့ */
+    display: inline-block;
+    animation: leafWobble 3s ease-in-out infinite; 
+}
+.hero-stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+}
+.stat-box h3 {
+    font-size: 28px;
+    color: #e6a15c;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 5px;
+}
+.stat-box p {
+    font-size: 13px;
+    color: #d7ccc8;
+    margin-bottom: 0;
+}
+.promo-section {
+    background: linear-gradient(rgba(62, 39, 35, 0.85), rgba(62, 39, 35, 0.85)), url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=1928&auto=format&fit=crop') no-repeat center center/cover;
+    padding: 80px 8%;
+    text-align: center;
+    color: white;
+}
+.promo-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.promo-tag {
+    background: #8d4f2a;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.promo-content h2 {
+    font-size: 32px;
+    margin: 20px 0;
+    font-family: 'Playfair Display', serif;
+}
+.promo-content p {
+    font-size: 15px;
+    color: #f5f5f5;
+    line-height: 1.8;
+}

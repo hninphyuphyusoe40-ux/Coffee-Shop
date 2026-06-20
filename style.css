@@ -498,3 +498,77 @@ box-shadow: 0 15px 30px rgba(141, 79, 42, 0.2);
     color: #f5f5f5;
     line-height: 1.8;
 }
+/* ===================================================
+   MOBILE RESPONSIVE STYLES (ဖုန်းမျက်နှာပြင်အတွက် ပြင်ဆင်ချက်)
+   =================================================== */
+
+@media screen and (max-width: 768px) {
+    /* ၁။ Hero Section တစ်ခုလုံးကို အောက်သို့ အလိုက်သင့် ဆင်းပေးခြင်း */
+    .hero {
+        padding-top: 140px !important; /* နာဗီဂေးရှင်းဘားအောက် ရောက်အောင် ဖယ်ပေးတာပါ */
+        height: auto !important;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    /* ၂။ ထပ်နေတဲ့ စာသားကြီးတွေကို ဖုန်းနဲ့အဆင်ပြေမယ့် အရွယ်အစား လျှော့ချခြင်း */
+    .hero h1 {
+        font-size: 32px !important;    /* စာလုံးအရွယ်အစား လျှော့လိုက်ပါတယ် */
+        line-height: 1.4 !important;
+        margin-bottom: 15px !important;
+    }
+
+    .hero p {
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+        margin-bottom: 25px !important;
+    }
+
+    /* ၃။ ထပ်နေတဲ့ ခလုတ် (Buttons) များကို တစ်ခုစီ အောက်ဆင့်ချပေးခြင်း */
+    .hero-buttons {
+        display: flex;
+        flex-direction: column; /* ဘေးတိုက်မဟုတ်ဘဲ အပေါ်အောက် ပြောင်းလဲခြင်း */
+        gap: 15px !important;
+        width: 100%;
+        align-items: center;
+        margin-bottom: 35px !important;
+    }
+
+    .hero-buttons .btn {
+        width: 80% !important;   /* ခလုတ်ကို ဖုန်းမျက်နှာပြင်နဲ့ အဆင်ပြေအောင် အကျယ်ချဲ့တာပါ */
+        text-align: center;
+        padding: 12px 20px !important;
+    }
+
+    /* ၄။ ကိန်းဂဏန်းပြကွက် (Stats) များ အပေါ်အောက် စီပေးခြင်း */
+    .hero-stats {
+        flex-direction: column !important;
+        gap: 20px !important;
+        align-items: center;
+        margin-top: 20px !important;
+        text-align: center;
+    }
+
+    .stat-box {
+        background: rgba(255, 255, 255, 0.05); /* ဖတ်ရလွယ်အောင် နောက်ခံလေး ထည့်ပေးတာပါ */
+        padding: 15px;
+        border-radius: 8px;
+        width: 80%;
+    }
+
+    /* ၅။ Navigation Bar စာသားများ ဖုန်းမှာ ဆန့်အောင် ညှိခြင်း */
+    .navbar {
+        padding: 15px 5% !important;
+        flex-wrap: wrap; /* လိုအပ်ရင် အောက်စာမျက်နှာဆင်းဖို့ */
+    }
+
+    .nav-links {
+        gap: 15px !important;
+    }
+
+    .nav-links a {
+        font-size: 14px !important;
+    }
+}
